@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --whatsapp-green: #25D366;
+  --whatsapp-teal: #075E54;
+  --whatsapp-teal-light: #128C7E;
+  --whatsapp-blue: #34B7F1;
+  --whatsapp-bg-light: #E5DDD5;
+  --whatsapp-bg-dark: #0B141A;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-sans);
+}
+
+/* WhatsApp specific styles */
+.whatsapp-bubble-me {
+  background-color: #134d37;
+  position: relative;
+}
+
+.whatsapp-bubble-me::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #134d37;
+  border-right: 10px solid transparent;
+}
+
+.whatsapp-bubble-them {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.whatsapp-bubble-them::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffffff;
+  border-left: 10px solid transparent;
+}
+
+.dark .whatsapp-bubble-me {
+  background-color: #134d37;
+  color: #1f2c33;
+}
+
+.dark .whatsapp-bubble-me::after {
+  border-top: 10px solid #134d37;
+  border-right: 10px solid transparent;
+}
+
+.dark .whatsapp-bubble-them {
+  background-color: #1f2c33;
+  color: #1f2c33;
+}
+
+.dark .whatsapp-bubble-them::after {
+  border-top: 10px solid ##1f2c33;
+  border-left: 10px solid transparent;
+}
